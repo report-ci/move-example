@@ -2,10 +2,10 @@ language: go
 sudo: false
 
 install:
+  - GOPATH=$TRAVIS_BUILD_DIR
   - go get "github.com/stretchr/testify/assert"
 
 script:
-  - GOPATH=$TRAVIS_BUILD_DIR
   - go test arithmetic -json > testdata.json
 
 after_script:
