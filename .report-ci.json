@@ -1,0 +1,17 @@
+{
+  ".settings": {
+    "debug": true
+  },
+  "src/arithmetic/arithmetic_test.go:8-12": "src/arithmetic/arithmetic.go:2-5",
+  "src/arithmetic/arithmetic_test.go": {
+    "16-19": "src/arithmetic/arithmetic.go:7-9",
+    "22-27": "src/arithmetic/arithmetic.go:12",
+    "29-34": {
+      "src/arithmetic/arithmetic.go": [
+        15,
+        16,
+        17
+      ]
+    }
+  }
+}
