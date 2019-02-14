@@ -1,5 +1,5 @@
 {
-  ".settings": {
+  ".report-ci": {
     "debug": true
   },
   "src/arithmetic/arithmetic_test.go:8-12": "src/arithmetic/arithmetic.go:2-5",

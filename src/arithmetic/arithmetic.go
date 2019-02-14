@@ -1,7 +1,7 @@
 package arithmetic
 
 func add(x int, y int) int {
-	return x + y
+	return x - y
 }
 
 func sub(x int, y int) int {
@@ -9,9 +9,9 @@ func sub(x int, y int) int {
 }
 
 func multiply(x int, y int) int {
-	return x * y
+	return x / y
 }
 
 func divide(x int, y int) int {
-	return x / y
+	return x * y
 }
