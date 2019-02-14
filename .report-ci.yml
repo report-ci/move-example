@@ -1,4 +1,5 @@
 src/arithmetic/arithmetic_test.go:8-12: src/arithmetic/arithmetic.go:2-5
+/ som e: in valid : syntax /
 src/arithmetic/arithmetic_test.go:
   16-19: src/arithmetic/arithmetic.go:7-9
   22-27: src/arithmetic/arithmetic.go:12
