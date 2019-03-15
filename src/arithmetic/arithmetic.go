@@ -13,5 +13,14 @@ func multiply(x int, y int) int {
 }
 
 func divide(x int, y int) int {
+	if (y == 0)	{
+		if (x == 0) {
+			return 1
+		} else if (x < 0){
+			return -0x80000000
+		} else {
+			return  0x7FFFFFFF
+		}
+	}
 	return x / y
 }

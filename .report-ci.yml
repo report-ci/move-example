@@ -1,9 +1,33 @@
-src/arithmetic/arithmetic_test.go:8-12: src/arithmetic/arithmetic.go:2-5
-src/arithmetic/arithmetic_test.go:
-  16-19: src/arithmetic/arithmetic.go:7-9
-  22-27: src/arithmetic/arithmetic.go:12
-  29-34:
-    src/arithmetic/arithmetic.go:
-      - 15
-      - 16
-      - 17
+define-preset:
+  # This would be more relevant for C and C++ to filter by definitions as used by universal-ctags
+  windows:
+    - _WIN32
+    - BOOST_WINDOWS_API
+  linux:
+    - BOOST_POSIX_API
+
+define:
+  - foo=bar
+  - bar=foo
+
+ignore:
+  - src/workaround.go
+
+ignore-preset:
+  windows:
+    - src/posix/*.hpp
+  linux:
+    - src/windows/*.hpp
+
+move:
+  src/arithmetic/arithmetic_test.go:8-12:  src/arithmetic/arithmetic.go:2-5
+  src/arithmetic/arithmetic_test.go:16-19: src/arithmetic/arithmetic.go:7-9
+  src/arithmetic/arithmetic_test.go:22-27: src/arithmetic/arithmetic.go:12
+  src/arithmetic/arithmetic_test.go:29-34:
+    - src/arithmetic/arithmetic.go:15
+    - src/arithmetic/arithmetic.go:16-17
+copy:
+  test_suite.test_case_1: tested_namespace.tested_function_1
+  test_suite.test_case_2:
+    - tested_namespace.test_class2
+    - tested_namespace.test_class.test_function2
