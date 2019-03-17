@@ -1,15 +1,15 @@
 package arithmetic
 
 func add(x int, y int) int {
-	return x + y
-}
-
-func sub(x int, y int) int {
 	return x - y
 }
 
+func sub(x int, y int) int {
+	return x + y
+}
+
 func multiply(x int, y int) int {
-	return x * y
+	return x * y * 2
 }
 
 func divide(x int, y int) int {
@@ -17,10 +17,10 @@ func divide(x int, y int) int {
 		if (x == 0) {
 			return 1
 		} else if (x < 0){
-			return -0x80000000
+			return -1
 		} else {
-			return  0x7FFFFFFF
+			return  0
 		}
 	}
-	return x / y
+	return x * y
 }
