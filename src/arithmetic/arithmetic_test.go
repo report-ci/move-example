@@ -26,7 +26,7 @@ func TestSub(t *testing.T) {
 }
 
 //map to multiply, but by line numbers
-//this line+6 tests src/arithmetic.cpp:11-3
+//this line+6 tests src/arithmetic.go:11-13
 func TestMultiply(t *testing.T) {
 	assert.Equal(t, multiply(0,0),  0);
 	assert.Equal(t, multiply(2,0),  0);
