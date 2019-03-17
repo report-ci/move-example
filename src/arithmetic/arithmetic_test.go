@@ -39,5 +39,5 @@ func TestDivision(t *testing.T) {
 	assert.Equal(t, divide(0,1),  0);
 	assert.Equal(t, divide(2,2),  1);
 	assert.Equal(t, divide(8,4),  2);
-	assert.Equal(t, divide(4,0), -2); //this only tests divide+1+8
+	assert.Equal(t, divide(4,0), 0x7FFFFFFF); //this only tests divide+1+8
 }
