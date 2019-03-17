@@ -9,4 +9,4 @@ script:
   - go test arithmetic stuff -json > testdata.json
 
 after_script:
-  - curl -s https://raw.githubusercontent.com/report-ci/scripts/master/upload.py | python  - --define posix
+  - curl -s https://raw.githubusercontent.com/report-ci/scripts/master/upload.py | python  - --preset posix
