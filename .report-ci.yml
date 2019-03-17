@@ -7,27 +7,19 @@ define-preset:
     - BOOST_POSIX_API
 
 define:
-  - foo=bar
-  - bar=foo
+  # This define would have effect on posix
+  - REPORT_CI=1
 
 ignore:
+  # Exclude a file from being tagged
   - src/workaround.go
 
 ignore-preset:
   windows:
-    - src/posix/*.hpp
+    - src/stuff/posix.go
   linux:
-    - src/windows/*.hpp
+    - src/stuff/windows.go
 
-move:
-  src/arithmetic/arithmetic_test.go:8-12:  src/arithmetic/arithmetic.go:2-5
-  src/arithmetic/arithmetic_test.go:16-19: src/arithmetic/arithmetic.go:7-9
-  src/arithmetic/arithmetic_test.go:22-27: src/arithmetic/arithmetic.go:12
-  src/arithmetic/arithmetic_test.go:29-34:
-    - src/arithmetic/arithmetic.go:15
-    - src/arithmetic/arithmetic.go:16-17
 copy:
-  test_suite.test_case_1: tested_namespace.tested_function_1
-  test_suite.test_case_2:
-    - tested_namespace.test_class2
-    - tested_namespace.test_class.test_function2
+  stuff.TestStuff: #same as src/stuff/stuff_test.go:8-11
+    - src/stuff/stuff.go:3-5 #Copy by line

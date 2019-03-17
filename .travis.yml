@@ -6,7 +6,7 @@ install:
   - go get "github.com/stretchr/testify/assert"
 
 script:
-  - go test arithmetic -json > testdata.json
+  - go test arithmetic stuff -json > testdata.json
 
 after_script:
-  - python <(curl -s https://raw.githubusercontent.com/report-ci/scripts/master/upload.py)
+  - curl -s https://raw.githubusercontent.com/report-ci/scripts/master/upload.py | python  - --define posix
