@@ -1,10 +1,30 @@
-src/arithmetic/arithmetic_test.go:8-12: src/arithmetic/arithmetic.go:2-5
-/ som e: in valid : syntax /
-src/arithmetic/arithmetic_test.go:
-  16-19: src/arithmetic/arithmetic.go:7-9
-  22-27: src/arithmetic/arithmetic.go:12
-  29-34:
-    src/arithmetic/arithmetic.go:
-      - 15
-      - 16
-      - 17
+define-preset:
+  # This would be more relevant for C and C++ to filter by definitions as used by universal-ctags
+  # we select it with the same --preset switch in .travis.yaml
+  windows:
+    - _WIN32
+    - BOOST_WINDOWS_API
+  linux:
+    - BOOST_POSIX_API
+
+define:
+  # This define would have effect on posix
+  - REPORT_CI=1
+
+ignore:
+  # Exclude a file from being tagged, because it's just workaround
+  - src/workaround.go
+
+ignore-preset:
+  # We have some OS specific code, so we ignore the proper one with the --preset option
+  windows:
+    - src/stuff/posix.go
+  linux:
+    - src/stuff/windows.go
+
+copy:
+  stuff.TestStuff: #same as src/stuff/stuff_test.go:8-11
+    - src/stuff/stuff.go:3-5 #Copy by line
+
+
+this-is-a-key-that-does-not-exist: 42
