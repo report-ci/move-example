@@ -3,5 +3,5 @@
 package stuff
 
 func do_stuff() int {
-	return 43
+	return 42
 }
