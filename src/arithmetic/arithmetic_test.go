@@ -18,7 +18,7 @@ func TestAdd(t *testing.T) {
 
 func TestSub(t *testing.T) {
 	//-> we add '<' to it looks backwards as to find line 19 and add "only" so we remove the original annotation
-	fmt.Print("<this tests sub");
+	fmt.Print("<this tests sub\n");
 	assert.Equal(t, sub(0,0),  0);
 	assert.Equal(t, sub(2,0),  2);
 	assert.Equal(t, sub(2,3),  -1);
