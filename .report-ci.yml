@@ -16,7 +16,7 @@ ignore:
   - src/workaround.go
 
 ignore-preset:
-  # We have some OS specific code, so we ignore the proper one with the --preset option.
+  # We have some OS specific code, so we ignore the proper one with the --preset option
   windows:
     - src/stuff/posix.go
   linux:
