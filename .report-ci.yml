@@ -1,5 +1,6 @@
 define-preset:
   # This would be more relevant for C and C++ to filter by definitions as used by universal-ctags
+  # we select it with the same --preset switch in .travis.yaml
   windows:
     - _WIN32
     - BOOST_WINDOWS_API
@@ -11,10 +12,11 @@ define:
   - REPORT_CI=1
 
 ignore:
-  # Exclude a file from being tagged
+  # Exclude a file from being tagged, because it's just workaround
   - src/workaround.go
 
 ignore-preset:
+  # We have some OS specific code, so we ignore the proper one with the --preset option.
   windows:
     - src/stuff/posix.go
   linux:
