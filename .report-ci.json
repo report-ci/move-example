@@ -1,0 +1,30 @@
+{
+  "define-preset": {
+    "windows": [
+      "_WIN32",
+      "BOOST_WINDOWS_API"
+    ],
+    "linux": [
+      "BOOST_POSIX_API"
+    ]
+  },
+  "define": [
+    "REPORT_CI=1"
+  ],
+  "ignore": [
+    "src/workaround.go"
+  ],
+  "ignore-preset": {
+    "windows": [
+      "src/stuff/posix.go"
+    ],
+    "linux": [
+      "src/stuff/windows.go"
+    ]
+  },
+  "copy": {
+    "stuff.TestStuff": [
+      "src/stuff/stuff.go:3-5"
+    ]
+  }
+}
