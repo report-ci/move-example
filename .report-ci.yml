@@ -25,3 +25,6 @@ ignore-preset:
 copy:
   stuff.TestStuff: #same as src/stuff/stuff_test.go:8-11
     - src/stuff/stuff.go:3-5 #Copy by line
+
+
+this-is-a-key-that-does-not-exist: 42
